@@ -242,6 +242,7 @@ console.log(n);
 
 // 5 falsy values: 0, '', undefined, null, NaN
 
+/*
 console.log(Boolean(0));
 console.log(Boolean(undefined));
 console.log(Boolean("Precha"));
@@ -262,3 +263,27 @@ if (height) {
 } else {
   console.log(`Height is UNDEFINED`);
 }
+*/
+
+const age = 18;
+// if have one line no need {}
+// if (age === 18) console.log(`You just became an adult :D (Strict)`);
+// if (age == 18) console.log(`You just became an adult :D (loose)`);
+
+const favourite = Number(prompt(`What's your favorite number?`));
+console.log(favourite);
+console.log(typeof favourite);
+
+if (favourite === 23) {
+  // 22 === 23 -> FALSE
+  console.log("Cool! 23 is an amazing number!");
+} else if (favourite === 7) {
+  console.log(`7 is also a cool number`);
+} else if (favourite === 9) {
+  console.log(`9 is also a cool number`);
+} else {
+  console.log("Number is not 23 or 7");
+}
+
+// if favour difference 23
+if (favourite !== 23) console.log("Why not 23?");
