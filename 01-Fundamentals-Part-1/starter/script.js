@@ -33,6 +33,7 @@ let myCurrentJob = "Teacher"; //better than let job2 = 'teacher'
 console.log(myFirstJob);
 */
 
+/*
 let javascriptIsFun = true;
 console.log(javascriptIsFun);
 
@@ -59,3 +60,23 @@ console.log(typeof year);
 
 // Error it show object
 console.log(typeof null);
+*/
+
+// Reassigning allow
+let age = 30;
+age = 31;
+console.log(age);
+
+// Reassigning not allow
+const birthYear = 1991;
+// birthYear = 1990;
+// const job; is not allow it should be defined
+
+// Old ways - look like let it can change value
+var job = "programmer";
+job = "teacher";
+
+// JavaScript add automatic call scoope - never use this idea
+lastName = "Krasaesup";
+console.log(lastName);
+console.log(typeof lastName);
