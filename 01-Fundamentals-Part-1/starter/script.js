@@ -349,6 +349,7 @@ if (scoreDolphins > scoreKoalas && scoreDolphins >= 100) {
 }
 */
 
+/*
 const day = "friday";
 
 //break is important!
@@ -389,3 +390,18 @@ if (day === "monday") {
 } else {
   console.log("Not a valid day");
 }
+*/
+
+// Expression - produce values
+3 + 4;
+1991;
+true && false && !false;
+
+//Statement - sentence
+if (23 > 10) {
+  // TO DO SOMETHING
+  const str = "23 is bigger"; //23 is bigger is expression
+}
+
+const me = "Precha";
+console.log(`I'm ${2037 - 1993} years old. ${me}`);
