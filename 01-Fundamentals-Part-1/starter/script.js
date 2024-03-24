@@ -216,6 +216,7 @@ if (BMIMark > BMIJohn) {
 }
 */
 
+/*
 // type conversion
 const inputYear = "1991";
 console.log(Number(inputYear), inputYear);
@@ -237,3 +238,27 @@ console.log("23" / "2");
 let n = "1" + 1; // String 11
 n = n - 1; // Strgin 11 - Number 1 = Number 10
 console.log(n);
+*/
+
+// 5 falsy values: 0, '', undefined, null, NaN
+
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean("Precha"));
+console.log(Boolean({}));
+console.log(Boolean(""));
+console.log(Boolean(NaN));
+
+const money = 100;
+if (money) {
+  console.log(`Don't spend it all ;p`);
+} else {
+  console.log(`You should get a job!`);
+}
+
+let height = 0;
+if (height) {
+  console.log(`YAY! Height is defined`);
+} else {
+  console.log(`Height is UNDEFINED`);
+}
