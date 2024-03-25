@@ -124,6 +124,7 @@ console.log(yearsUntillRetirement(1950, "Mike"));
 // const age = calAge(1993, "Precha");
 */
 
+/*
 const calcAvarage = (a, b, c) => (a + b + c) / 3;
 console.log(calcAvarage(3, 4, 5));
 
@@ -151,3 +152,45 @@ scoreDolphins = calcAvarage(85, 54, 41);
 scoreKoalas = calcAvarage(23, 34, 27);
 console.log(scoreDolphins, scoreKoalas);
 checkWinner(scoreDolphins, scoreKoalas);
+*/
+
+const friend1 = "Micheal";
+const friend2 = "Steven";
+const friend3 = "Peter";
+
+const friends = ["Micheal", "Steven", "Peter"];
+console.log(friends);
+
+const y = new Array(1991, 1984, 2008, 2020);
+
+console.log(friends[0]);
+console.log(friends[2]);
+
+console.log(friends.length);
+console.log(friends[friends.length - 1]);
+
+friends[2] = "Jay";
+console.log(friends);
+// friends = ['Bob' ,'Alice']; <- Can not do entire of arrays
+
+const precha = ["Precha", "Krasaesup", 2037 - 1993, "Student", friends];
+console.log(precha);
+console.log(precha.length);
+
+// Exercise
+const calcAge = function (birthYear) {
+  return 2037 - birthYear;
+};
+const years = [1990, 1967, 2002, 2010, 2018];
+
+const age1 = calcAge(years[0]);
+const age2 = calcAge(years[1]);
+const age3 = calcAge(years[years.length - 1]);
+console.log(age1, age2, age3);
+
+const ages = [
+  calcAge(years[0]),
+  calcAge(years[1]),
+  calcAge(years[years.length - 1]),
+];
+console.log(ages);
