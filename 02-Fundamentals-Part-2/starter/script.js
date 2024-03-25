@@ -349,6 +349,7 @@ console.log(jonas.age);
 console.log(jonas.getSummary());
 */
 
+/*
 const mark = {
   fullName: "Mark Miller",
   mass: 78,
@@ -383,4 +384,27 @@ if (mark.bmi > john.bmi) {
     `${john.fullName}'s BMI (${john.bmi}) is higher than
     ${mark.fullname}'s BMI (${mark.bmi})`
   );
+}
+*/
+
+////////////////////////////////////////////////
+//**************** LOOP SECTION **************//
+////////////////////////////////////////////////
+
+/*
+console.log("Lifting weights repettition 1 🏋️‍♀️");
+console.log("Lifting weights repettition 2 🏋️‍♀️");
+console.log("Lifting weights repettition 3 🏋️‍♀️");
+console.log("Lifting weights repettition 4 🏋️‍♀️");
+console.log("Lifting weights repettition 5 🏋️‍♀️");
+console.log("Lifting weights repettition 6 🏋️‍♀️");
+console.log("Lifting weights repettition 7 🏋️‍♀️");
+console.log("Lifting weights repettition 8 🏋️‍♀️");
+console.log("Lifting weights repettition 9 🏋️‍♀️");
+console.log("Lifting weights repettition 10 🏋️‍♀️");
+*/
+
+// for loop keeps running while conditions is TRUE
+for (let rep = 1; rep <= 10; rep++) {
+  console.log(`Lifting weights repettition ${rep} 🏋️‍♀️`);
 }
