@@ -241,6 +241,7 @@ const totals = [bills[0] + tips[0] + bills[1] + tips[1] + bills[2] + tips[2]];
 console.log(bills, tips, totals);
 */
 
+/*
 const jonasArray = [
   "Jonas",
   "Schmedtmann",
@@ -257,3 +258,48 @@ const jonas = {
   job: "teacher",
   friends: ["Micheal", "Peter", "Steven"],
 };
+*/
+
+const jonas = {
+  firstName: "Jonas",
+  lastName: "Schmedtmann",
+  age: 2037 - 1991,
+  job: "teacher",
+  friends: ["Micheal", "Peter", "Steven"],
+};
+console.log(jonas);
+
+console.log(jonas.lastName);
+console.log(jonas["lastName"]);
+
+const nameKey = "Name";
+console.log(jonas["first" + nameKey]);
+console.log(jonas["last" + nameKey]);
+
+// console.log(jonas.'last' + nameKey); -> Not work!
+
+const interestIn = prompt(
+  "What do you want to know about Jonas? Choose between firstName, lastName, age, job and friends"
+);
+
+//console.log(jonas.interestIn); -> Undefined
+// console.log(jonas[interestIn]); -> Defined
+
+if (jonas[interestIn]) {
+  console.log(jonas[interestIn]);
+} else {
+  console.log(
+    `Wrong request! Choose between firstName, lastName, age, job and friends`
+  );
+}
+
+jonas.location = "Portugal";
+jonas["twitter"] = `@jonasschmedtmann`;
+console.log(jonas[interestIn]);
+
+// Challenge
+// "Jonas has 3 friends, and his best friend is called Micheal"
+
+console.log(
+  `${jonas.firstName} has ${jonas.friends.length} friends. and his best friend is called ${jonas.friends[0]}`
+);
