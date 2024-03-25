@@ -306,6 +306,7 @@ console.log(
 );
 */
 
+/*
 const jonas = {
   firstName: "Jonas",
   lastName: "Schmedtmann",
@@ -322,6 +323,7 @@ const jonas = {
   //   // console.log(this);
   //   return 2037 - this.birthYear;
   // },
+
 
   calcAge: function () {
     this.age = 2037 - this.birthYear;
@@ -345,3 +347,40 @@ console.log(jonas.age);
 // Challenge
 // "Jonas is a 46-year old teacher. and he has a driver lincense"
 console.log(jonas.getSummary());
+*/
+
+const mark = {
+  fullName: "Mark Miller",
+  mass: 78,
+  height: 1.69,
+  calcBMI: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  },
+};
+
+const john = {
+  fullName: "John Smith",
+  mass: 92,
+  height: 1.95,
+  calcBMI: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  },
+};
+
+mark.calcBMI();
+john.calcBMI();
+console.log(mark.bmi, john.bmi);
+
+if (mark.bmi > john.bmi) {
+  console.log(
+    `${mark.fullName}'s BMI (${mark.bmi}) is higher than
+    ${john.fullname}'s BMI (${john.bmi})`
+  );
+} else if (john.bmi > mark.bmi) {
+  console.log(
+    `${john.fullName}'s BMI (${john.bmi}) is higher than
+    ${mark.fullname}'s BMI (${mark.bmi})`
+  );
+}
