@@ -12,6 +12,7 @@ if (hasDriversLincense) console.log(`I can drive :D`);
 // const private = 534;
 */
 
+/*
 function logger(myName) {
   console.log(`My name is ${myName}`);
 }
@@ -36,3 +37,21 @@ const appleOrangeJuice = fruitProcessor(2, 4);
 console.log(appleOrangeJuice);
 
 const num = Number("23");
+*/
+
+//Parameter is kind of placeholder and argument is extra value that add in
+
+// Function declaration
+function calAge1(birthYear) {
+  return 2037 - birthYear;
+}
+
+const age1 = calAge1(1993);
+
+// Function expression
+const calAge2 = function (birthYear) {
+  return 2037 - birthYear;
+};
+
+const age2 = calAge2(1991);
+console.log(age1, age2);
