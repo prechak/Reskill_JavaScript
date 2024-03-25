@@ -39,6 +39,7 @@ console.log(appleOrangeJuice);
 const num = Number("23");
 */
 
+/*
 //Parameter is kind of placeholder and argument is extra value that add in
 
 // Function declaration
@@ -55,3 +56,19 @@ const calAge2 = function (birthYear) {
 
 const age2 = calAge2(1991);
 console.log(age1, age2);
+*/
+
+// Arrow function
+const calAge3 = (birthYear) => 2037 - birthYear;
+const age3 = calAge3(1993);
+console.log(age3);
+
+const yearsUntillRetirement = (birthYear, firstName) => {
+  const age = 2037 - birthYear;
+  const retirement = 65 - age;
+  // return retirement;
+  return `${firstName} retire in ${retirement}`;
+};
+
+console.log(yearsUntillRetirement(1991, "Precha"));
+console.log(yearsUntillRetirement(1980, "Bob"));
