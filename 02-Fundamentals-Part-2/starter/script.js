@@ -402,9 +402,60 @@ console.log("Lifting weights repettition 7 🏋️‍♀️");
 console.log("Lifting weights repettition 8 🏋️‍♀️");
 console.log("Lifting weights repettition 9 🏋️‍♀️");
 console.log("Lifting weights repettition 10 🏋️‍♀️");
-*/
 
 // for loop keeps running while conditions is TRUE
 for (let rep = 1; rep <= 10; rep++) {
   console.log(`Lifting weights repettition ${rep} 🏋️‍♀️`);
+}
+
+*/
+
+const jonasArray = [
+  "Jonas",
+  "Schmedtmann",
+  2037 - 1991,
+  "teacher",
+  ["Micheal", "Peter", "Steven"],
+  true,
+];
+const types = [];
+
+// console.log(jonas[0])
+// console.log(jonas[1])
+// ...
+// console.log(jonas[4])
+// jonas[5] does not exist
+
+for (let i = 0; i < jonasArray.length; i++) {
+  // Reading from jonas array
+  console.log(jonasArray[i], typeof jonasArray[i]);
+
+  // Filling types array
+  // types[i] = typeof jonasArray[i];
+  types.push(typeof jonasArray[i]);
+}
+
+console.log(types);
+
+const year = [1991, 2007, 1969, 2020];
+const ages = [];
+
+for (let i = 0; i < year.length; i++) {
+  ages.push(2037 - year[i]);
+}
+
+console.log(ages);
+
+// continue and break
+console.log("--- ONLY STRINGS ---");
+for (let i = 0; i < jonasArray.length; i++) {
+  if (typeof jonasArray[i] !== "string") continue; // Show only string
+  console.log(jonasArray[i], typeof jonasArray[i]);
+}
+
+console.log("--- BREAK WITH NUMBER ---");
+for (let i = 0; i < jonasArray.length; i++) {
+  if (typeof jonasArray[i] === "number") break; // When found number exit loop immedietly
+
+  console.log(jonasArray[i], typeof jonasArray[i]);
 }
