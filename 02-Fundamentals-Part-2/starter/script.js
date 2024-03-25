@@ -410,6 +410,7 @@ for (let rep = 1; rep <= 10; rep++) {
 
 */
 
+/*
 const jonasArray = [
   "Jonas",
   "Schmedtmann",
@@ -458,4 +459,26 @@ for (let i = 0; i < jonasArray.length; i++) {
   if (typeof jonasArray[i] === "number") break; // When found number exit loop immedietly
 
   console.log(jonasArray[i], typeof jonasArray[i]);
+}
+*/
+
+const jonasArray = [
+  "Jonas",
+  "Schmedtmann",
+  2037 - 1991,
+  "teacher",
+  ["Micheal", "Peter", "Steven"],
+  true,
+];
+
+for (let i = jonasArray.length - 1; i >= 0; i--) {
+  console.log(i, jonasArray[i]);
+}
+
+for (let excercise = 1; excercise < 4; excercise++) {
+  console.log(`---------- Starting excercise ${excercise}`);
+
+  for (let rep = 1; rep < 6; rep++) {
+    console.log(`Excercise ${excercise} Lifting weight repetition ${rep} 🏋️‍♀️`);
+  }
 }
