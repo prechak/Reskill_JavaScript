@@ -81,6 +81,7 @@ const amplitudeNew = calcTempAmplitudeNew([3, 5, 1], [9, 0, 5]);
 console.log(amplitudeNew);
 */
 
+/*
 const measureKelvin = function () {
   const measurement = {
     type: 'temp',
@@ -116,6 +117,7 @@ const calcTempAmplitudeBug = function (t1, t2) {
     const curTemp = temps[i];
     if (typeof curTemp !== 'number') continue;
 
+    // debugger;
     if (curTemp > max) max = curTemp;
     if (curTemp < min) min = curTemp;
   }
@@ -126,3 +128,26 @@ const calcTempAmplitudeBug = function (t1, t2) {
 const amplitudeBug = calcTempAmplitudeBug([3, 5, 1], [9, 4, 5]);
 // A) IDENTIFY
 console.log(amplitudeBug);
+*/
+
+/*
+given an array of forcasted maximum temperatures, the thermometer display a string with these temperatures.
+
+Examples: [17, 21, 23] print "... 17ํC in 1 days. .. 22ํC in 2 days ... 23ํC in 3 days ..."
+
+create a function 'printForecast' which takes in an arrays 'arr' and logs a string like the above to the console
+
+Test data1: [17, 21, 23]
+Test data2:[12, 5, -5, 0, 4]
+*/
+
+const printFocecast = function (arr) {
+  // let day = 0; use less
+  let sum = '';
+  for (let i = 0; i < arr.length; i++) {
+    sum = sum + ` ... ${arr[i]} ํC in day ${[i + 1]}`;
+  }
+  return sum;
+};
+
+console.log(printFocecast([17, 21, 23]));
