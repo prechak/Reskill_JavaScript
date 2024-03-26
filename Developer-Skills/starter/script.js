@@ -141,6 +141,8 @@ Test data1: [17, 21, 23]
 Test data2:[12, 5, -5, 0, 4]
 */
 
+/*
+//Self
 const printFocecast = function (arr) {
   // let day = 0; use less
   let sum = '';
@@ -151,3 +153,24 @@ const printFocecast = function (arr) {
 };
 
 console.log(printFocecast([17, 21, 23]));
+*/
+
+// 1) Understanding the problem
+// - What is the X days? Answer: index + 1
+
+// 2 Breaking up into sub-problems
+// - Transform array into string
+// - Transform each element to Stringwith °C
+// - Strings needs to contain day (index + 1)
+// - Add ... between elements and start and end of string
+// - Log string to console
+
+const printForecast = function (arr) {
+  let str = '';
+  for (let i = 0; i < arr.length; i++) {
+    str += `${arr[i]}°C in days ${[i + 1]} ... `;
+  }
+  console.log('... ' + str);
+};
+
+printForecast([12, 5, -5, 0, 4]);
