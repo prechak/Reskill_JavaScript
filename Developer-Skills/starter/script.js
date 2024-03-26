@@ -110,7 +110,7 @@ const calcTempAmplitudeBug = function (t1, t2) {
   console.log(temps);
 
   let max = 0;
-  let min = 0;
+  let min = 0; // Can not work because all value is no less than zero, 0 is min
 
   for (let i = 0; i < temps.length; i++) {
     const curTemp = temps[i];
