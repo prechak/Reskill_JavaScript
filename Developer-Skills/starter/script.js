@@ -155,6 +155,7 @@ const printFocecast = function (arr) {
 console.log(printFocecast([17, 21, 23]));
 */
 
+/*
 // 1) Understanding the problem
 // - What is the X days? Answer: index + 1
 
@@ -174,3 +175,4 @@ const printForecast = function (arr) {
 };
 
 printForecast([12, 5, -5, 0, 4]);
+*/
