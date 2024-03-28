@@ -22,5 +22,16 @@ for (let i = 0; i < btnOpenModal.length; i++)
 
 // not use closeModal() it will call immedietly
 btnCloseModal.addEventListener('click', closeModal);
-
 overlay.addEventListener('click', closeModal);
+
+document.addEventListener('keydown', function (e) {
+  console.log(e.key);
+
+  if (e.key === 'Escape') {
+    // console.log('Esc was pressed');
+    if (!modal.classList.contains('hidden')) {
+      // if modal does not contain hidden closeModal
+      closeModal();
+    }
+  }
+});
