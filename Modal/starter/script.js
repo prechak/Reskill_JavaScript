@@ -5,22 +5,22 @@ const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.close-modal');
 const btnOpenModal = document.querySelectorAll('.show-modal');
 
-console.log(btnOpenModal);
-
-for (let i = 0; i < btnOpenModal.length; i++)
-  btnOpenModal[i].addEventListener('click', function () {
-    console.log('Button clicked');
-    modal.classList.remove('hidden'); // remove hidden
-    overlay.classList.remove('hidden');
-    // modal.style.display = 'block'; // always use hidden in class not in block
-  });
-
 const closeModal = function () {
   modal.classList.add('hidden');
   overlay.classList.add('hidden');
 };
 
-// not use closeModal() it call immedietly
+const openModal = function () {
+  modal.classList.remove('hidden');
+  overlay.classList.remove('hidden');
+};
+
+console.log(btnOpenModal);
+
+for (let i = 0; i < btnOpenModal.length; i++)
+  btnOpenModal[i].addEventListener('click', openModal);
+
+// not use closeModal() it will call immedietly
 btnCloseModal.addEventListener('click', closeModal);
 
 overlay.addEventListener('click', closeModal);
