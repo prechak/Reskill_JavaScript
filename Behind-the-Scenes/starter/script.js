@@ -36,6 +36,7 @@
 
 /////////////////////////////////////////////
 
+/*
 // Variables
 console.log(me);
 // console.log(job);
@@ -77,3 +78,39 @@ const z = 3;
 console.log(x === window.x);
 console.log(x === window.y);
 console.log(x === window.z);
+*/
+
+/////////////////////////////////////////////
+
+console.log(this);
+
+const calcAgeg = function (birthYear) {
+  console.log(2037 - birthYear);
+  // console.log(this);
+};
+calcAgeg(1991);
+
+const calcAgegArrow = birthYear => {
+  console.log(2037 - birthYear);
+  // console.log(this);
+};
+calcAgegArrow(1980);
+
+const jonas = {
+  year: 1991,
+  calcAge: function () {
+    console.log(this);
+    console.log(2037 - this.year);
+  },
+};
+jonas.calcAge();
+
+const matilda = {
+  year: 2017,
+};
+
+matilda.calcAge = jonas.calcAge;
+matilda.calcAge();
+
+const f = jonas.calcAge;
+f();
