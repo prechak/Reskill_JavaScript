@@ -53,6 +53,49 @@ const restaurant = {
   },
 };
 
+////////////////////////////////////////////////////////
+//*********** Logical Assignment Operators ***********//
+////////////////////////////////////////////////////////
+
+/*
+
+const rest1 = {
+  name: 'Carpi',
+  // numGuests: 20,
+  numGuests: 0,
+};
+
+const rest2 = {
+  name: 'La Piazza',
+  owner: 'Giovanni Rossi',
+};
+
+// OR assignment operator
+// rest1.numGuests = rest1.numGuests || 10;
+// rest2.numGuests = rest2.numGuests || 10;
+
+// rest1.numGuests ||= 10;
+// rest2.numGuests ||= 10;
+
+// nulish assignment operator(null or undefined)
+rest1.numGuests ??= 10;
+rest2.numGuests ??= 10;
+
+// And assignment operator
+// rest1.owner = rest1.owner && '<ANNONYMOUS>';
+// rest2.owner = rest2.owner && '<ANNONYMOUS>';
+rest1.owner &&= '<ANNONYMOUS>';
+rest2.owner &&= '<ANNONYMOUS>';
+
+console.log(rest1);
+console.log(rest2);
+*/
+
+////////////////////////////////////////////////////////
+//******** The Nullish Coalescing Operator () ********//
+////////////////////////////////////////////////////////
+
+/*
 restaurant.numGuests = 0;
 const guest = restaurant.numGuests || 10;
 console.log(guest);
@@ -60,6 +103,7 @@ console.log(guest);
 // Nullish: null and undefined (NOT 0 or '')
 const guestCorrect = restaurant.numGuests ?? 10;
 console.log(guestCorrect);
+*/
 
 ////////////////////////////////////////////////////////
 //************ Short Circuiting (&& and ) ************//
