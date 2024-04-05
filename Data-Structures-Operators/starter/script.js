@@ -57,8 +57,6 @@ const restaurant = {
 //*********** Logical Assignment Operators ***********//
 ////////////////////////////////////////////////////////
 
-/*
-
 const rest1 = {
   name: 'Carpi',
   // numGuests: 20,
@@ -89,7 +87,6 @@ rest2.owner &&= '<ANNONYMOUS>';
 
 console.log(rest1);
 console.log(rest2);
-*/
 
 ////////////////////////////////////////////////////////
 //******** The Nullish Coalescing Operator () ********//
