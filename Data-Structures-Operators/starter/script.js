@@ -53,6 +53,16 @@ const restaurant = {
   },
 };
 
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+
+for (const item of menu) console.log(item);
+
+for (const [i, el] of menu.entries()) {
+  console.log(`${i + 1}: ${el}`);
+}
+
+console.log(...menu.entries());
+
 ////////////////////////////////////////////////////////
 //*********** Logical Assignment Operators ***********//
 ////////////////////////////////////////////////////////
@@ -318,10 +328,11 @@ const [p = 1, q = 1, r = 1] = [8];
 console.log(p, q, r);
 */
 
+/*
 ///////////////////////////////////////
 // Coding Challenge #1
 
-/*
+
 We're building a football betting app (soccer for my American friends 😅)!
 
 Suppose we get data from a web service about a certain game (below). In this challenge we're gonna work with the data. So here are your tasks:
@@ -339,6 +350,7 @@ TEST DATA FOR 6: Use players 'Davies', 'Muller', 'Lewandowski' and 'Kimmich'. Th
 GOOD LUCK 😀
 */
 
+/*
 const game = {
   team1: 'Bayern Munich',
   team2: 'Borrussia Dortmund',
@@ -415,3 +427,4 @@ printGoals(...game.scored);
 // 7.
 team1 < team2 && console.log('Team 1 is more likely to win');
 team1 > team2 && console.log('Team 2 is more likely to win');
+*/
