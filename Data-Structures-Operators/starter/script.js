@@ -59,6 +59,46 @@ const restaurant = {
 };
 
 ////////////////////////////////////////////////////////
+//************************ Sets **********************//
+////////////////////////////////////////////////////////
+
+const orderSet = new Set([
+  'Pasta',
+  'Pizza',
+  'Pizza',
+  'Risotto',
+  'Pasta',
+  'Pizza',
+]);
+
+console.log(orderSet);
+
+console.log(new Set('Jonas'));
+
+console.log(orderSet.size);
+console.log(orderSet.has('Pizza'));
+console.log(orderSet.has('Bread'));
+orderSet.add('Garlic Bread');
+orderSet.add('Garlic Bread');
+// orderSet.clear();
+orderSet.delete('Risotto');
+
+console.log(orderSet);
+
+for (const order of orderSet) console.log(order);
+
+// Example
+const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
+const staffSet = [...new Set(staff)];
+console.log(staffSet);
+console.log(
+  new Set(['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter']).size
+);
+
+console.log(new Set('jonasschemedtmann').size);
+console.log(new Set('prechakrasaesup').size);
+
+////////////////////////////////////////////////////////
 //* Looping Objects Object Keys, Values, and Entries *//
 ////////////////////////////////////////////////////////
 
@@ -430,6 +470,7 @@ TEST DATA FOR 6: Use players 'Davies', 'Muller', 'Lewandowski' and 'Kimmich'. Th
 GOOD LUCK 😀
 */
 
+/*
 const game = {
   team1: 'Bayern Munich',
   team2: 'Borrussia Dortmund',
@@ -506,7 +547,7 @@ printGoals(...game.scored);
 // 7.
 team1 < team2 && console.log('Team 1 is more likely to win');
 team1 > team2 && console.log('Team 2 is more likely to win');
-
+*/
 ///////////////////////////////////////
 // Coding Challenge #2
 
@@ -530,7 +571,7 @@ BONUS: Create an object called 'scorers' which contains the names of the players
 
 GOOD LUCK 😀
 */
-
+/*
 // 1.)
 for (const [index, player] of game.scored.entries()) {
   console.log(`Goal${index + 1} : ${player}`);
@@ -548,3 +589,11 @@ for (const [team, odd] of Object.entries(game.odds)) {
   const teamStr = team === 'x' ? 'draw' : `victory ${game[team]}`;
   console.log(`Odd of ${teamStr} ${odd}`);
 }
+
+// 4. Create an object called 'scorers' which contains the names of the players who scored as properties, and the number of goals as the value
+const scorers = {};
+for (const player of game.scored) {
+  scorers[player] = (scorers[player] || 0) + 1;
+}
+console.log(scorers);
+*/
