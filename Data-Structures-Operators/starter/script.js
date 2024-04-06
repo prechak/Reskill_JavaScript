@@ -1,10 +1,12 @@
 'use strict';
 
-//
+////////////////////////////////////////////////////////
+//************* Enhanced Object Literals *************//
+////////////////////////////////////////////////////////
 
 const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
 
-const hours = {
+const openingHours = {
   [weekdays[3]]: {
     open: 12,
     close: 22,
@@ -33,7 +35,7 @@ const restaurant = {
   // openingHours: openingHours, // ->before es6
 
   // ES6 enhanced
-  hours,
+  openingHours,
 
   order(starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
@@ -55,6 +57,44 @@ const restaurant = {
     console.log(otherIngredients);
   },
 };
+
+////////////////////////////////////////////////////////
+//*************** Optional Chaining (.) **************//
+////////////////////////////////////////////////////////
+
+// if (restaurant.openingHours.fri.open)
+//   console.log(restaurant.openingHours.fri.open);
+
+if (restaurant.openingHours && restaurant.openingHours.mon)
+  console.log(restaurant.openingHours.mon.open);
+
+// Open undefined it not work
+// console.log(restaurant.openingHours.mon.open);
+
+// WITH optional changing
+console.log(restaurant.openingHours.mon?.open);
+console.log(restaurant.openingHours?.mon?.open);
+
+//Example
+const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+for (const day of days) {
+  console.log(day);
+  const open = restaurant.openingHours[day]?.open ?? 'closed';
+  console.log(`On ${day}, we open at ${open}`);
+}
+
+// Methods
+console.log(restaurant.order?.(0, 1) ?? 'Methods does not exist');
+console.log(restaurant.orderRissoto?.(0, 1) ?? 'Methods does not exist');
+
+//Arrays
+// const users = [{ name: 'Jonas', email: 'hello@jonas.io' }];
+const users = [];
+
+console.log(users[0]?.name ?? 'User array empty');
+
+if (users.length > 0) console.log(users[0].name);
+else console.log('users array empty');
 
 ////////////////////////////////////////////////////////
 //********** Looping Arrays The for-of Loop **********//
