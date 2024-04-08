@@ -552,7 +552,6 @@ TEST DATA FOR 6: Use players 'Davies', 'Muller', 'Lewandowski' and 'Kimmich'. Th
 GOOD LUCK 😀
 */
 
-/*
 const game = {
   team1: 'Bayern Munich',
   team2: 'Borrussia Dortmund',
@@ -629,7 +628,7 @@ printGoals(...game.scored);
 // 7.
 team1 < team2 && console.log('Team 1 is more likely to win');
 team1 > team2 && console.log('Team 2 is more likely to win');
-*/
+
 ///////////////////////////////////////
 // Coding Challenge #2
 
@@ -653,7 +652,7 @@ BONUS: Create an object called 'scorers' which contains the names of the players
 
 GOOD LUCK 😀
 */
-/*
+
 // 1.)
 for (const [index, player] of game.scored.entries()) {
   console.log(`Goal${index + 1} : ${player}`);
@@ -678,4 +677,32 @@ for (const player of game.scored) {
   scorers[player] = (scorers[player] || 0) + 1;
 }
 console.log(scorers);
+
+///////////////////////////////////////
+// Coding Challenge #3
+
+/*
+Let's continue with our football betting app! This time, we have a map with a log of the events that happened during the game. The values are the events themselves, and the keys are the minutes in which each event happened (a football game has 90 minutes plus some extra time).
+
+1. Create an array 'events' of the different game events that happened (no duplicates)
+2. After the game has finished, is was found that the yellow card from minute 64 was unfair. So remove this event from the game events log.
+3. Print the following string to the console: "An event happened, on average, every 9 minutes" (keep in mind that a game has 90 minutes)
+4. Loop over the events and log them to the console, marking whether it's in the first half or second half (after 45 min) of the game, like this:
+      [FIRST HALF] 17: ⚽️ GOAL
+
+GOOD LUCK 😀
 */
+
+const gameEvents = new Map([
+  [17, '⚽️ GOAL'],
+  [36, '🔁 Substitution'],
+  [47, '⚽️ GOAL'],
+  [61, '🔁 Substitution'],
+  [64, '🔶 Yellow card'],
+  [69, '🔴 Red card'],
+  [70, '🔁 Substitution'],
+  [72, '🔁 Substitution'],
+  [76, '⚽️ GOAL'],
+  [80, '⚽️ GOAL'],
+  [92, '🔶 Yellow card'],
+]);
