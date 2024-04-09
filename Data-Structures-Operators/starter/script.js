@@ -100,6 +100,55 @@ console.log(...question.keys());
 console.log(...question.values());
 
 ////////////////////////////////////////////////////////
+//*********** Working With Strings - Part 1 **********//
+////////////////////////////////////////////////////////
+
+console.log(`----- Working With Strings - Part 1 -----`);
+
+const airline = 'TAP Air Portugal';
+const plane = 'A320';
+
+console.log(plane[0]);
+console.log(plane[1]);
+console.log(plane[2]);
+console.log('B737'[0]);
+
+console.log(airline.length);
+console.log('B737'.length);
+
+console.log(airline.indexOf('r'));
+console.log(airline.lastIndexOf('r'));
+console.log(airline.indexOf('protugal'));
+
+console.log(airline.slice(4));
+console.log(airline.slice(4, 7));
+
+console.log(airline.slice(0, airline.indexOf(' ')));
+console.log(airline.slice(airline.lastIndexOf(' ') + 1));
+
+console.log(airline.slice(-2));
+console.log(airline.slice(1, -1));
+
+const checkMiddleSeat = function (seat) {
+  // B and E are middle seats
+  const s = seat.slice(-1);
+  if (s === 'B' || s === 'E') {
+    console.log('You got middle seat 🥶');
+  } else {
+    console.log('You got lucky 😎');
+  }
+};
+
+checkMiddleSeat('11B');
+checkMiddleSeat('23C');
+checkMiddleSeat('3E');
+
+console.log(new String('jonas'));
+console.log(typeof new String('jonas'));
+
+console.log(typeof new String('jonas').slice(1));
+
+////////////////////////////////////////////////////////
 //***************** Map Fundamentals ****************//
 ////////////////////////////////////////////////////////
 
@@ -552,6 +601,7 @@ TEST DATA FOR 6: Use players 'Davies', 'Muller', 'Lewandowski' and 'Kimmich'. Th
 GOOD LUCK 😀
 */
 
+/*
 const game = {
   team1: 'Bayern Munich',
   team2: 'Borrussia Dortmund',
@@ -652,7 +702,7 @@ BONUS: Create an object called 'scorers' which contains the names of the players
 
 GOOD LUCK 😀
 */
-
+/*
 // 1.)
 for (const [index, player] of game.scored.entries()) {
   console.log(`Goal${index + 1} : ${player}`);
@@ -692,7 +742,7 @@ Let's continue with our football betting app! This time, we have a map with a lo
 
 GOOD LUCK 😀
 */
-
+/*
 const gameEvents = new Map([
   [17, '⚽️ GOAL'],
   [36, '🔁 Substitution'],
@@ -730,3 +780,4 @@ for (const [min, event] of gameEvents) {
   const half = min < 45 ? 'First' : 'Second';
   console.log(`[${half} HALF] ${min}: ${event}`);
 }
+*/
