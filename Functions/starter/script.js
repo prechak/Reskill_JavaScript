@@ -184,3 +184,49 @@ book.apply(swiss, fliightData);
 console.log(swiss);
 
 book.call(swiss, ...fliightData); // the same as upper
+
+// Bing method
+//book.call(eurowings, 23, 'Sarah Corner');
+
+const bookEW = book.bind(eurowings);
+const bookLH = book.bind(lufthansa);
+const bookLX = book.bind(swiss);
+
+bookEW(23, 'Steven William');
+
+const bookEW23 = book.bind(eurowings, 23);
+bookEW23('Precha Krasaesup');
+bookEW23('Martha Cooper');
+
+// With Event Listener
+lufthansa.planes = 300;
+lufthansa.buyPlane = function () {
+  console.log(this);
+  this.planes++;
+  console.log(this.planes);
+};
+// lufthansa.buyPlane();
+
+document
+  .querySelector('.buy')
+  .addEventListener('click', lufthansa.buyPlane.bind(lufthansa));
+
+// Partial application
+const addTax = (rate, value) => value + value * rate;
+console.log(addTax(0.1, 200));
+
+// first argument of bind is .this but in this case we don't care
+const addVat = addTax.bind(null, 0.23);
+// addVat = addTax(rate, value) => value + value * rate;
+
+console.log(addVat(100));
+console.log(addVat(23));
+
+const addTaxRate = function (rate) {
+  return function (value) {
+    return value + value * rate;
+  };
+};
+const addVat2 = addTaxRate(0.23);
+console.log(addVat(100));
+console.log(addVat(23));
