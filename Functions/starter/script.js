@@ -268,54 +268,37 @@ GOOD LUCK 😀
 */
 
 const poll = {
-  question: 'What is your favourite programming language?',
-  options: ['JavaScript', 'Python', 'Rust', 'C++'],
-  answers: [0, 0, 0, 0],
+  question: 'What is your favourite programming?',
+  options: ['0: JavaScript', '1: Python', '2: Rust', '3: C++'],
+  // This generates [0,0,0,0].More in the next section
+  answers: new Array(4).fill(0),
 
   registerNewAnswer() {
-    // Display prompt window for user input
-    const input = prompt(
-      `${this.question}\n${this.options.join('\n')}\n(Write option number)`
+    const answer = Number(
+      prompt(
+        `${this.question}\n${this.options.join('\n')}\n(Write option number)`
+      )
     );
+    console.log(answer);
 
-    // Convert input to number and check if it's valid
-    const option = Number(input);
-    if (
-      option >= 0 &&
-      option < this.options.length &&
-      Number.isInteger(option)
-    ) {
-      // Update answers array
-      this.answers[option]++;
-      // Display results
-      this.displayResults();
-    } else {
-      alert('Invalid input! Please enter a valid option number.');
-    }
+    // Register answer
+    typeof answer === 'number' &&
+      answer < this.options.length &&
+      this.answers[answer]++; // nice use case for short circuiting
+
+    console.log(this.answers);
+    this.displayResult('string');
   },
-
-  displayResults(type = 'array') {
+  displayResult(type = 'array') {
     if (type === 'array') {
-      console.log(this.answers);
+      console.log(`Poll result are array ${this.answers}`);
     } else if (type === 'string') {
-      console.log(`Poll results are ${this.answers.join(', ')}`);
-    } else {
-      console.log('Invalid display type. Please specify "array" or "string".');
+      console.log(`Poll result are string ${this.answers}`);
     }
   },
 };
+// poll.registerNewAnswer();
 
-// Button click event listener
-document.querySelector('.poll').addEventListener('click', function () {
-  poll.registerNewAnswer();
-});
-
-// // Bonus Test Data 1
-// const testData1 = [5, 2, 3];
-// poll.displayResults.call({ answers: testData1 }, 'array'); // Display results as array
-// poll.displayResults.call({ answers: testData1 }, 'string'); // Display results as string
-
-// // Bonus Test Data 2
-// const testData2 = [1, 5, 3, 9, 6, 1];
-// poll.displayResults.call({ answers: testData2 }, 'array'); // Display results as array
-// poll.displayResults.call({ answers: testData2 }, 'string'); // Display results as string
+document
+  .querySelector('.poll')
+  .addEventListener('click', poll.registerNewAnswer.bind(poll));
