@@ -114,6 +114,9 @@ console.log(`----- JOIN -----`);
 console.log(letters.join(' - '));
 */
 
+// --------------- The new at Method ---------------
+
+/*
 const arr = [23, 11, 64];
 console.log(arr[0]);
 console.log(arr.at(0));
@@ -126,3 +129,29 @@ console.log(arr.at(-2));
 
 console.log('jonas'.at(0));
 console.log('jonas'.at(-1));
+*/
+
+// --------------- forEach ---------------
+
+// for (const movement of movements) {
+for (const [i, movement] of movements.entries()) {
+  if (movement > 0) {
+    console.log(`Movements ${i + 1}: You depositeed ${movement}`);
+  } else {
+    console.log(`Movements ${i + 1}: You withddrew ${Math.abs(movement)}`);
+  }
+}
+
+console.log(`----- ForEach -----`);
+
+movements.forEach(function (mov, i, arr) {
+  if (mov > 0) {
+    console.log(`Movements ${i + 1}: You depositeed ${mov}`);
+  } else {
+    console.log(`Movements ${i + 1}: You withddrew ${Math.abs(mov)}`);
+  }
+});
+// 0: function(200)
+// 1: function(450)
+// 2: function(400
+// ...
