@@ -225,29 +225,22 @@ TEST DATA 2: Julia's data [9, 16, 6, 8, 3], Kate's data [10, 5, 6, 1, 4]
 GOOD LUCK 😀
 */
 
-const checkDogs = function (dogsJulia, dogsKate) {
-  // Shallow copy Julia's array and remove cat ages
-  const correctedJulia = dogsJulia.slice(1, -2);
+const checkDogs = function (dogJulia, dogKate) {
+  const correctJulia = dogJulia.slice(1, -2);
+  // console.log(correctJulia);
 
-  // Create array with corrected Julia's and Kate's data
-  const allDogs = [...correctedJulia, ...dogsKate];
+  const allDogs = [...correctJulia, ...dogKate];
+  // console.log(allDogs);
 
-  // Log whether each dog is an adult or a puppy
-  allDogs.forEach((age, i) => {
-    const ageStatus = age >= 3 ? 'adult' : 'puppy';
-    const ageDog = ageStatus === 'adult' ? `${age} years old` : 'puppy 🐶';
-    console.log(
-      `Dog number ${i + 1} is ${
-        ageStatus === 'adult' ? 'an adult, and is' : 'still a'
-      } ${ageDog}`
-    );
+  allDogs.forEach(function (age, i) {
+    if (age >= 3) {
+      console.log(`Dog number ${i + 1} is an adult and it ${age} years old`);
+    } else {
+      console.log(`Dog number ${i + 1} is still a puppy 🐶`);
+    }
   });
 };
 
-// Test Data 1
-console.log('---- Test Data 1 ----');
 checkDogs([3, 5, 2, 12, 7], [4, 1, 15, 8, 3]);
-
-// Test Data 2
-console.log('---- Test Data 2 ----');
+console.log(`------------------------------`);
 checkDogs([9, 16, 6, 8, 3], [10, 5, 6, 1, 4]);
