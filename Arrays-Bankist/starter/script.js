@@ -225,31 +225,23 @@ TEST DATA 2: Julia's data [9, 16, 6, 8, 3], Kate's data [10, 5, 6, 1, 4]
 GOOD LUCK 😀
 */
 
-const checkDogs = function (dogJulia, dogKate) {
-  const correctJulia = dogJulia.slice(1, -2);
-  // console.log(correctJulia);
+const checkDogs = function (dogsJulia, dogsKate) {
+  const dogsJuliaCorrected = dogsJulia.slice();
+  dogsJuliaCorrected.splice(0, 1);
+  dogsJuliaCorrected.splice(-2);
+  // dogJuliaCorrected.slice(1, -2) or (1, 3)
+  const dogs = dogsJuliaCorrected.concat(dogsKate); // use array method concat
 
-  const allDogs = [...correctJulia, ...dogKate];
-  // console.log(allDogs);
+  console.log(dogs);
 
-  allDogs.forEach(function (age, i) {
-    // Way 2
-    const checkAge = age >= 3 ? 'adult' : 'puppy';
-    const display =
-      checkAge === 'adult'
-        ? `is an adult, and is ${age} years old`
-        : 'is still a puppy 🐶';
-    console.log(`Dog number ${i + 1} is an ${display}`);
-
-    // Way 1
-    // if (age >= 3) {
-    //   console.log(`Dog number ${i + 1} is an adult and it ${age} years old`);
-    // } else {
-    //   console.log(`Dog number ${i + 1} is still a puppy 🐶`);
-    // }
+  dogs.forEach(function (dog, i) {
+    //function(currentEl, index, array)
+    if (dog >= 3) {
+      console.log(`Dog number ${i + 1} is an adult, and is ${dog} years old`);
+    } else {
+      console.log(`Dog number ${i + 1} is still puppy 🐶`);
+    }
   });
 };
 
 checkDogs([3, 5, 2, 12, 7], [4, 1, 15, 8, 3]);
-console.log(`------------------------------`);
-checkDogs([9, 16, 6, 8, 3], [10, 5, 6, 1, 4]);
