@@ -233,11 +233,20 @@ const checkDogs = function (dogJulia, dogKate) {
   // console.log(allDogs);
 
   allDogs.forEach(function (age, i) {
-    if (age >= 3) {
-      console.log(`Dog number ${i + 1} is an adult and it ${age} years old`);
-    } else {
-      console.log(`Dog number ${i + 1} is still a puppy 🐶`);
-    }
+    // Way 2
+    const checkAge = age >= 3 ? 'adult' : 'puppy';
+    const display =
+      checkAge === 'adult'
+        ? `is an adult, and is ${age} years old`
+        : 'is still a puppy 🐶';
+    console.log(`Dog number ${i + 1} is an ${display}`);
+
+    // Way 1
+    // if (age >= 3) {
+    //   console.log(`Dog number ${i + 1} is an adult and it ${age} years old`);
+    // } else {
+    //   console.log(`Dog number ${i + 1} is still a puppy 🐶`);
+    // }
   });
 };
 
