@@ -80,6 +80,17 @@ const displayMovement = function (movements) {
 };
 displayMovement(account1.movements);
 
+const user = 'Steven Thomas Williams'; // stw
+const username = user
+  .toLowerCase()
+  .split(' ')
+  .map(function (name) {
+    return name[0];
+  })
+  .join('');
+
+console.log(username);
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
@@ -251,6 +262,7 @@ checkDogs([3, 5, 2, 12, 7], [4, 1, 15, 8, 3]);
 ///////////////////////////////////////
 // The map Method
 
+/*
 const eurToUsd = 1.1;
 
 // const movementsUSD = movements.map(function (mov) {
@@ -273,3 +285,4 @@ const movementsDescriptions = movements.map(
 );
 
 console.log(movementsDescriptions);
+*/
