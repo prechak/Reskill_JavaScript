@@ -375,14 +375,16 @@ const calcAverageHumanAge = function (dogAges) {
   const humanAge = dogAges.map(dogAge =>
     dogAge <= 2 ? dogAge * 2 : 16 + dogAge * 4
   );
-  const dogAge = humanAge.filter(dogAges => dogAges > 18);
-  const averageDog = dogAge.reduce((acc, avg) => acc + avg, 0) / dogAge.length;
+  const adults = humanAge.filter(dogAges => dogAges >= 18);
+  const averageDog = adults.reduce((acc, age) => acc + age, 0) / adults.length;
+
+  // 2 3, (2 + 3) / 2 = 2.5 OR 2/2+2/3 = 2.5
+
+  console.log(humanAge);
+  console.log(adults);
   console.log(averageDog);
 };
 
-calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
-
-// const calcPrintBalance = function (movements) {
-//   const balance = movements.reduce((acc, mov) => acc + mov, 0);
-//   labelBalance.textContent = `${balance} EUR`;
-// };
+const avg1 = calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
+console.log(`----------`);
+const avg2 = calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
