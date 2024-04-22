@@ -858,7 +858,8 @@ HINT 2: Being within a range 10% above and below the recommended portion
 means: current > (recommended * 0.90) && current < (recommended * 1.10).
 Basically, the current portion should be between 90% and 110% of the
 recommended portion.
-*/
+
+
 
 console.log(`----- Coding Challenge -----`);
 
@@ -872,7 +873,7 @@ const dogs = [
 
 /*
 GOOD LUCK 😀
-*/
+
 
 // 1. Loop exiting array
 dogs.forEach(dog => (dog.recFood = Math.trunc(dog.weight ** 0.75 * 28)));
@@ -918,3 +919,4 @@ console.log(dogs.filter(checkEatingOkay));
 // 8.
 const dogsSorted = dogs.slice().sort((a, b) => a.recFood - b.recFood);
 console.log(dogsSorted);
+*/
