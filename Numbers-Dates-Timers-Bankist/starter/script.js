@@ -341,6 +341,7 @@ console.log((2.7).toFixed(3));
 console.log(+(2.345).toFixed(2));
 */
 
+/*
 /////////////////////////////////////////////////
 // The Remainder Operator
 
@@ -368,3 +369,23 @@ labelBalance.addEventListener('click', function () {
 });
 
 // Nth
+*/
+
+/////////////////////////////////////////////////
+// Numeric Seperator
+
+// 287,460,000,000
+const diameter = 287_460_000_000; // Underscore will not show in anything nut ez to read use instead comma
+console.log(diameter);
+
+const price = 345_99;
+console.log(price);
+
+const transferFee1 = 15_00;
+const transferFee2 = 1_500; // ez to read more
+
+const PI = 3.1_415; // but not allow at the begin or the end
+console.log(PI);
+
+console.log(Number('230_00')); // can not use in this case
+console.log(parseInt('230_00')); // everything will be ignore
