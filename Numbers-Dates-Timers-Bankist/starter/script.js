@@ -371,6 +371,7 @@ labelBalance.addEventListener('click', function () {
 // Nth
 */
 
+/*
 /////////////////////////////////////////////////
 // Numeric Seperator
 
@@ -389,3 +390,43 @@ console.log(PI);
 
 console.log(Number('230_00')); // can not use in this case
 console.log(parseInt('230_00')); // everything will be ignore
+*/
+
+/////////////////////////////////////////////////
+// Working with BigInt
+
+console.log(2 ** 53 - 1);
+console.log(Number.MAX_SAFE_INTEGER);
+
+// Not safe number
+console.log(2 ** 53 + 1);
+console.log(2 ** 53 + 2);
+console.log(2 ** 53 + 3);
+console.log(2 ** 53 + 4);
+
+console.log(4858239859234859348509253859034850923485093n); // n transform regular to big int
+console.log(BigInt(4858239859));
+
+// Operations
+console.log(10000n + 10000n);
+console.log(
+  23904810239849231840982130958390124859043859034859348095n *
+    434923849382492389n
+);
+// console.log(Math.sqrt(16n)); // doesn't work
+
+const huge = 23021940194019049109093124n;
+const regular = 23;
+// console.log(huge * regular); // Can not do this
+console.log(huge * BigInt(regular));
+
+console.log(20n > 15);
+console.log(20n === 20);
+console.log(typeof 20n);
+console.log(20n == '20');
+
+console.log(huge + ' is REALLY big!!!');
+
+// Divisions
+console.log(10n / 3n);
+console.log(10 / 3);
