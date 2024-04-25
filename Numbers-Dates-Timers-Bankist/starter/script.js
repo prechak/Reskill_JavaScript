@@ -22,8 +22,8 @@ const account1 = {
     '2020-04-01T10:17:24.185Z',
     '2020-05-08T14:11:59.604Z',
     '2020-07-26T17:01:17.194Z',
-    '2024-04-20T23:36:17.929Z',
-    '2024-04-23T10:51:36.790Z',
+    '2024-04-23T20:36:17.929Z',
+    '2024-04-24T10:51:36.790Z',
   ],
   currency: 'EUR',
   locale: 'pt-PT', // de-DE
@@ -81,13 +81,12 @@ const inputClosePin = document.querySelector('.form__input--pin');
 /////////////////////////////////////////////////
 // Functions
 
-const formatMovementDate = function (date) {
+const formatMovementDate = function (date, locale) {
   const calcDaysPassed = (date1, date2) =>
     Math.round(Math.abs(date2 - date1) / (1000 * 60 * 60 * 24));
 
   const daysPassed = calcDaysPassed(new Date(), date);
   console.log(daysPassed);
-  console.log(date);
 
   if (daysPassed === 0) return 'Today';
   if (daysPassed === 1) return 'Yesterday';
@@ -251,7 +250,7 @@ btnLoan.addEventListener('click', function (e) {
     // Add movement
     currentAccount.movements.push(amount);
 
-    // Add load date
+    // Add loan date
     currentAccount.movementsDates.push(new Date().toISOString());
 
     // Update UI
